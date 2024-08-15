@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2pmv41bvo8eq"]
+
+[ext_resource type="PackedScene" uid="uid://57cbs4l3mrxb" path="res://Scenes/mazda_mx_5.tscn" id="1_fkdu3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32uue"]
+albedo_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1s8a6"]
+material = SubResource("StandardMaterial3D_32uue")
+uv2_padding = 1.21
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bnsbb"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Game" type="Node3D"]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(28.6525, 0, 0, 0, 0.516245, 0, 0, 0, 42.163, 0, 0, 0)
+mesh = SubResource("BoxMesh_1s8a6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_bnsbb")
+
+[node name="Mazda Mx-5" parent="." instance=ExtResource("1_fkdu3")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(2.87868e-08, 0.258819, -0.965926, -7.71341e-09, 0.965926, 0.258819, 1, -8.88178e-16, 2.98023e-08, -6.71912, 3.4315, 0.136932)

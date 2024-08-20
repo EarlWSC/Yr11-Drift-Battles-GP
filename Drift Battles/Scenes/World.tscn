@@ -3,12 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://57cbs4l3mrxb" path="res://Scenes/mazda_mx_5.tscn" id="1_fkdu3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g60h6"]
-sky_top_color = Color(0.65098, 0.862745, 1, 1)
-sky_horizon_color = Color(0.858824, 0.533333, 0.729412, 1)
-sky_curve = 0.0923359
-sky_cover_modulate = Color(0.843137, 0.466667, 0.772549, 1)
-ground_bottom_color = Color(0.717647, 0.65098, 0.576471, 1)
-ground_horizon_color = Color(0.847059, 0.607843, 0.0705882, 1)
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(0.505882, 0.682353, 0.796078, 1)
+sky_curve = 0.439226
+ground_bottom_color = Color(0.72549, 0.705882, 0.709804, 1)
+ground_horizon_color = Color(0.54902, 0.764706, 0.862745, 1)
 
 [sub_resource type="Sky" id="Sky_nq2rl"]
 resource_local_to_scene = true
@@ -20,11 +19,12 @@ sky = SubResource("Sky_nq2rl")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32uue"]
-albedo_color = Color(0.423529, 0.27451, 0.152941, 1)
+albedo_color = Color(0.180392, 0.160784, 0.160784, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1s8a6"]
 material = SubResource("StandardMaterial3D_32uue")
 uv2_padding = 1.21
+size = Vector3(10, 1, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bnsbb"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
@@ -41,11 +41,8 @@ mesh = SubResource("BoxMesh_1s8a6")
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0.00545288, -1.84733e-06, -0.000520774)
 shape = SubResource("ConcavePolygonShape3D_bnsbb")
 
 [node name="Mazda Mx-5" parent="." instance=ExtResource("1_fkdu3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.09492, 0)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.792492, 0.157849, -0.589101, -7.71341e-09, 0.965926, 0.258819, 0.609882, 0.205112, -0.765489, -6.43671, 8.10174, -8.7956)
-fov = 108.256

@@ -11,3 +11,4 @@ func _physics_process(delta):
 	$LR_Wheel.engine_force = acceleration * max_torque * (1 - rpm / max_rpm)
 	rpm = abs($RR_Wheel.get_rpm())
 	$RR_Wheel.engine_force = acceleration * max_torque * (1 - rpm / max_rpm)
+	

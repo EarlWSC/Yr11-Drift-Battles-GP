@@ -451,7 +451,7 @@ skin = SubResource("Skin_uix3o")
 [node name="RR_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.89949, 0.711361, 1.15804)
 use_as_traction = true
-wheel_friction_slip = 1.0
+wheel_friction_slip = 0.5
 suspension_stiffness = 75.0
 
 [node name="RR Mesh" type="MeshInstance3D" parent="RR_Wheel"]
@@ -462,7 +462,7 @@ skin = SubResource("Skin_uix3o")
 [node name="LR_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.899, 0.711, -1.158)
 use_as_traction = true
-wheel_friction_slip = 1.0
+wheel_friction_slip = 0.5
 suspension_stiffness = 75.0
 
 [node name="LR Mesh" type="MeshInstance3D" parent="LR_Wheel"]

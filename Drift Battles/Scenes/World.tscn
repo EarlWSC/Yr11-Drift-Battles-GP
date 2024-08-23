@@ -60,13 +60,13 @@ transform = Transform3D(-1, -2.70151e-08, 8.3144e-08, 0, 0.951057, 0.309017, -8.
 fov = 90.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(257.4, 0, 0, 0, 1, 0, 0, 0, 11.2, 0, 0.489583, 0)
+transform = Transform3D(257.4, 0, 0, 0, 1, 0, 0, 0, 11.2, 0, -0.203182, 0)
 mesh = SubResource("BoxMesh_o0h12")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-22.2915, 0, 104.16, 0, 1, 0, -12.87, 0, -180.41, -45, 0.489583, -87)
+transform = Transform3D(-22.2915, 0, 104.16, 0, 1, 0, -12.87, 0, -180.41, -45, -0.203182, -87)
 mesh = SubResource("BoxMesh_o0h12")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-22.2915, 0, 104.16, 0, 1, 0, -12.87, 0, -180.41, 15, 0.489583, 89)
+transform = Transform3D(-22.2915, 0, 104.16, 0, 1, 0, -12.87, 0, -180.41, 15, -0.203182, 89)
 mesh = SubResource("BoxMesh_o0h12")

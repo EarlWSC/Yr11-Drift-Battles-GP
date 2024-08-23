@@ -428,7 +428,7 @@ skeleton = NodePath("")
 [node name="RF_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.36848e-08, -1.52551e-09, 1, -0.0348995, 0.999391, 0, -0.999391, -0.0348995, -4.37114e-08, 1.89958, 0.711361, 1.15804)
 use_as_steering = true
-wheel_friction_slip = 1.5
+wheel_friction_slip = 1.0
 suspension_stiffness = 75.0
 
 [node name="RF Mesh" type="MeshInstance3D" parent="RF_Wheel"]
@@ -439,7 +439,7 @@ skin = SubResource("Skin_uix3o")
 [node name="LF_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.36848e-08, 1.52551e-09, 1, 0.0348995, 0.999391, 0, -0.999391, 0.0348995, -4.37114e-08, 1.9, 0.711, -1.158)
 use_as_steering = true
-wheel_friction_slip = 1.5
+wheel_friction_slip = 1.0
 suspension_stiffness = 75.0
 
 [node name="LF Mesh" type="MeshInstance3D" parent="LF_Wheel"]
@@ -450,7 +450,7 @@ skin = SubResource("Skin_uix3o")
 [node name="RR_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.36848e-08, -1.52551e-09, 1, -0.0348995, 0.999391, 0, -0.999391, -0.0348995, -4.37114e-08, -1.89949, 0.711361, 1.15804)
 use_as_traction = true
-wheel_friction_slip = 0.8
+wheel_friction_slip = 0.5
 suspension_stiffness = 75.0
 
 [node name="RR Mesh" type="MeshInstance3D" parent="RR_Wheel"]
@@ -461,7 +461,7 @@ skin = SubResource("Skin_uix3o")
 [node name="LR_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.36848e-08, 1.52551e-09, 1, 0.0348995, 0.999391, 0, -0.999391, 0.0348995, -4.37114e-08, -1.899, 0.711, -1.158)
 use_as_traction = true
-wheel_friction_slip = 0.8
+wheel_friction_slip = 0.5
 suspension_stiffness = 75.0
 
 [node name="LR Mesh" type="MeshInstance3D" parent="LR_Wheel"]

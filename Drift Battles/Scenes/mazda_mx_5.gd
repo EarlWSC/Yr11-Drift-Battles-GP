@@ -1,18 +1,18 @@
 extends VehicleBody3D
 
-var max_rpm = 600
+var max_wheelspin = 600
 var max_torque = 151
-var handbrake_force = 1000
+var handbrake_force = 2000
 var handbrake_applied = false
 
 func _physics_process(delta):
 	
-	steering = lerp(steering, Input.get_axis("right", "left") * 0.6, 10 * delta)
-	var acceleration = Input.get_axis("back", "forward") * 100
-	var rpm = abs($LR_Wheel.get_rpm())
-	$LR_Wheel.engine_force = acceleration * max_torque * (1 - rpm / max_rpm)
-	rpm = abs($RR_Wheel.get_rpm())
-	$RR_Wheel.engine_force = acceleration * max_torque * (1 - rpm / max_rpm)
+	steering = lerp(steering, Input.get_axis("right", "left") * 0.6, 11 * delta)
+	var acceleration = Input.get_axis("back", "forward") * 500
+	var wheelspin = abs($LR_Wheel.get_rpm())
+	$LR_Wheel.engine_force = acceleration * max_torque * (1 - wheelspin / max_wheelspin)
+	wheelspin = abs($RR_Wheel.get_rpm())
+	$RR_Wheel.engine_force = acceleration * max_torque * (1 - wheelspin / max_wheelspin)
 	
 	# Check if handbrake is pressed
 	if Input.is_action_just_pressed("handbrake"):

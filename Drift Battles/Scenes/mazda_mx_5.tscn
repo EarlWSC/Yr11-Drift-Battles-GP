@@ -366,11 +366,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_grsys")
 
 [node name="Mazda Mx-5" type="VehicleBody3D"]
-mass = 1300.0
+mass = 1040.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(-0.6, 0, 0)
 engine_force = 100.0
-steering = 3.14159
 script = ExtResource("1_iuxqc")
 
 [node name="CollisionShape_Chassis" type="CollisionShape3D" parent="."]
@@ -427,46 +426,46 @@ mesh = SubResource("ArrayMesh_iaglr")
 skeleton = NodePath("")
 
 [node name="RF_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.89958, 0.711361, 1.15804)
+transform = Transform3D(-4.36848e-08, -1.52551e-09, 1, -0.0348995, 0.999391, 0, -0.999391, -0.0348995, -4.37114e-08, 1.89958, 0.711361, 1.15804)
 use_as_steering = true
-wheel_friction_slip = 1.0
+wheel_friction_slip = 1.5
 suspension_stiffness = 75.0
 
 [node name="RF Mesh" type="MeshInstance3D" parent="RF_Wheel"]
-transform = Transform3D(3.93403e-08, 0.252044, -0.0314095, 0, -0.00880156, -0.899452, 0.9, -1.10172e-08, 1.37296e-09, 0.00572097, 0, 0)
+transform = Transform3D(3.93164e-08, 0.252198, 5.58794e-08, 1.37296e-09, 1.02445e-08, -0.9, 0.9, -1.10172e-08, 1.37296e-09, 0.00571728, 0.000199556, 0)
 mesh = SubResource("CylinderMesh_ruiec")
 skin = SubResource("Skin_uix3o")
 
 [node name="LF_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0.711, -1.158)
+transform = Transform3D(-4.36848e-08, 1.52551e-09, 1, 0.0348995, 0.999391, 0, -0.999391, 0.0348995, -4.37114e-08, 1.9, 0.711, -1.158)
 use_as_steering = true
-wheel_friction_slip = 1.0
+wheel_friction_slip = 1.5
 suspension_stiffness = 75.0
 
 [node name="LF Mesh" type="MeshInstance3D" parent="LF_Wheel"]
-transform = Transform3D(-1.18021e-07, 0.252044, 0.0314095, 0, 0.00880155, -0.899452, 0.9, 3.30516e-08, 4.11886e-09, 0.00572097, 0, 0)
+transform = Transform3D(-1.17949e-07, 0.252198, -5.58794e-08, 4.11887e-09, -2.04891e-08, -0.9, 0.9, 3.30516e-08, 4.11886e-09, 0.00571728, -0.000199676, 0)
 mesh = SubResource("CylinderMesh_ruiec")
 skin = SubResource("Skin_uix3o")
 
 [node name="RR_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.89949, 0.711361, 1.15804)
+transform = Transform3D(-4.36848e-08, -1.52551e-09, 1, -0.0348995, 0.999391, 0, -0.999391, -0.0348995, -4.37114e-08, -1.89949, 0.711361, 1.15804)
 use_as_traction = true
-wheel_friction_slip = 0.5
+wheel_friction_slip = 0.8
 suspension_stiffness = 75.0
 
 [node name="RR Mesh" type="MeshInstance3D" parent="RR_Wheel"]
-transform = Transform3D(3.93403e-08, 0.252044, -0.0314095, 0, -0.00880156, -0.899452, 0.9, -1.10172e-08, 1.37296e-09, 0.00572097, 0, 0)
+transform = Transform3D(3.93164e-08, 0.252198, 5.58794e-08, 1.37296e-09, 1.02445e-08, -0.9, 0.9, -1.10172e-08, 1.37296e-09, 0.00571728, 0.000199556, 0)
 mesh = SubResource("CylinderMesh_ruiec")
 skin = SubResource("Skin_uix3o")
 
 [node name="LR_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.899, 0.711, -1.158)
+transform = Transform3D(-4.36848e-08, 1.52551e-09, 1, 0.0348995, 0.999391, 0, -0.999391, 0.0348995, -4.37114e-08, -1.899, 0.711, -1.158)
 use_as_traction = true
-wheel_friction_slip = 0.5
+wheel_friction_slip = 0.8
 suspension_stiffness = 75.0
 
 [node name="LR Mesh" type="MeshInstance3D" parent="LR_Wheel"]
-transform = Transform3D(-1.18021e-07, 0.252044, 0.0314095, 0, 0.00880155, -0.899452, 0.9, 3.30516e-08, 4.11886e-09, 0.00572097, 0, 0)
+transform = Transform3D(-1.17949e-07, 0.252198, -5.58794e-08, 4.11887e-09, -2.04891e-08, -0.9, 0.9, 3.30516e-08, 4.11886e-09, 0.00571728, -0.000199676, 0)
 mesh = SubResource("CylinderMesh_ruiec")
 skin = SubResource("Skin_uix3o")
 

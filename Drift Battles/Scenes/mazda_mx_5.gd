@@ -13,7 +13,7 @@ func _ready():
 
 func _physics_process(delta):
 # First # Value is Steering Range and Second # Value is Speed of steering from left to right/ vice versa
-	steering = lerp(steering, Input.get_axis("right", "left") * 0.5 , 11 * delta)
+	steering = lerp(steering, Input.get_axis("right", "left") * 1 , 11 * delta)
 	var acceleration = Input.get_axis("back", "forward") * 300
 	var wheelspin = abs($LR_Wheel.get_rpm())
 	$LR_Wheel.engine_force = acceleration * max_torque * (1 - wheelspin / max_wheelspin)

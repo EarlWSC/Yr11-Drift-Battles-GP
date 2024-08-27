@@ -426,10 +426,10 @@ skeleton = NodePath("")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0.7, 1.15)
 use_as_steering = true
 wheel_friction_slip = 1.0
-suspension_stiffness = 75.0
+suspension_stiffness = 100.0
 
 [node name="RF_Tyres Mesh" type="MeshInstance3D" parent="RF_Wheel"]
-transform = Transform3D(-4.15258e-08, -0.95, 4.09782e-08, 0, -4.09782e-08, -0.95, 0.95, -4.15258e-08, 1.7745e-15, 0, -0.02, 0)
+transform = Transform3D(-4.28372e-08, -0.98, 4.28372e-08, 0, -4.28372e-08, -0.98, 0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 
@@ -447,10 +447,10 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0.7, -1.15)
 use_as_steering = true
 wheel_friction_slip = 1.0
-suspension_stiffness = 75.0
+suspension_stiffness = 100.0
 
 [node name="LF_Tyres Mesh" type="MeshInstance3D" parent="LF_Wheel"]
-transform = Transform3D(-4.15511e-08, 0.95, 1.12497e-22, 1.44923e-09, 0, -0.95, -0.95, -4.15511e-08, -1.44923e-09, 0, -0.02, 0)
+transform = Transform3D(-4.28372e-08, 0.98, -4.28372e-08, 0, -4.28372e-08, -0.98, -0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 
@@ -472,7 +472,7 @@ wheel_friction_slip = 0.95
 suspension_stiffness = 120.0
 
 [node name="RR_Tyres Mesh" type="MeshInstance3D" parent="RR_Wheel"]
-transform = Transform3D(-4.15258e-08, -0.95, 4.09782e-08, 0, -4.09782e-08, -0.95, 0.95, -4.15258e-08, 1.7745e-15, 0, -0.02, 0)
+transform = Transform3D(-4.28372e-08, -0.98, 4.28372e-08, 0, -4.28372e-08, -0.98, 0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 
@@ -494,7 +494,7 @@ wheel_friction_slip = 0.95
 suspension_stiffness = 120.0
 
 [node name="LR_Tyres Mesh" type="MeshInstance3D" parent="LR_Wheel"]
-transform = Transform3D(-4.15511e-08, 0.95, -3.72529e-09, 1.44923e-09, -3.72529e-09, -0.95, -0.95, -4.15511e-08, -1.44923e-09, 0, -0.02, 0)
+transform = Transform3D(-4.28372e-08, 0.98, -4.28372e-08, 0, -4.28372e-08, -0.98, -0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 

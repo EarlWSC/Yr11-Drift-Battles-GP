@@ -50,9 +50,11 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.00545288, -3.87413, -0.0
 shape = SubResource("ConcavePolygonShape3D_bnsbb")
 
 [node name="Mazda Mx-5" parent="." instance=ExtResource("1_fkdu3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109562, 0)
+engine_force = 1.0
 
 [node name="camera_pivot_point" type="Node3D" parent="Mazda Mx-5"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.76837e-07, 0.109562, 2.84217e-14)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.76837e-07, -4.76837e-07, 2.84217e-14)
 script = ExtResource("2_f4g4w")
 
 [node name="Camera3D" type="Camera3D" parent="Mazda Mx-5/camera_pivot_point"]

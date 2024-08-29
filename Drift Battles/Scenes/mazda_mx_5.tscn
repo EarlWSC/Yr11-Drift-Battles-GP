@@ -473,7 +473,7 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.74, 1.15)
 use_as_traction = true
 wheel_roll_influence = 1.0
-wheel_friction_slip = 0.5
+wheel_friction_slip = 0.95
 suspension_stiffness = 120.0
 
 [node name="RR_Tyres Mesh" type="MeshInstance3D" parent="RR_Wheel"]
@@ -495,7 +495,7 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.74, -1.15)
 use_as_traction = true
 wheel_roll_influence = 1.0
-wheel_friction_slip = 0.5
+wheel_friction_slip = 0.95
 suspension_stiffness = 120.0
 
 [node name="LR_Tyres Mesh" type="MeshInstance3D" parent="LR_Wheel"]

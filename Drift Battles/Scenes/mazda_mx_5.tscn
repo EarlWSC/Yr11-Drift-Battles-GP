@@ -321,8 +321,11 @@ shadow_mesh = SubResource("ArrayMesh_qvm8l")
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8pp75"]
+lightmap_size_hint = Vector2i(17, 11)
 material = SubResource("StandardMaterial3D_yu7qx")
 height = 0.5
+radial_segments = 10
+rings = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mgawp"]
 
@@ -423,13 +426,14 @@ mesh = SubResource("ArrayMesh_iaglr")
 skeleton = NodePath("")
 
 [node name="RF_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0.7, 1.15)
+transform = Transform3D(-4.37114e-08, -1.74846e-07, 1, 0, 1, 1.74846e-07, -1, 7.64274e-15, -4.37114e-08, 1.9, 0.74, 1.15)
 use_as_steering = true
-wheel_friction_slip = 1.0
+wheel_roll_influence = 1.0
+wheel_friction_slip = 1.2
 suspension_stiffness = 100.0
 
 [node name="RF_Tyres Mesh" type="MeshInstance3D" parent="RF_Wheel"]
-transform = Transform3D(-4.28372e-08, -0.98, 4.28372e-08, 0, -4.28372e-08, -0.98, 0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
+transform = Transform3D(-4.28372e-08, -0.98, -4.28372e-08, 0, -4.28372e-08, 0.98, -0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 
@@ -444,13 +448,14 @@ mesh = SubResource("BoxMesh_mgawp")
 skeleton = NodePath("../../..")
 
 [node name="LF_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0.7, -1.15)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0.74, -1.15)
 use_as_steering = true
-wheel_friction_slip = 1.0
+wheel_roll_influence = 1.0
+wheel_friction_slip = 1.2
 suspension_stiffness = 100.0
 
 [node name="LF_Tyres Mesh" type="MeshInstance3D" parent="LF_Wheel"]
-transform = Transform3D(-4.28372e-08, 0.98, -4.28372e-08, 0, -4.28372e-08, -0.98, -0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
+transform = Transform3D(-4.28372e-08, 0.98, 4.28372e-08, 0, -4.28372e-08, 0.98, 0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 
@@ -465,13 +470,14 @@ mesh = SubResource("BoxMesh_mgawp")
 skeleton = NodePath("../../..")
 
 [node name="RR_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.7, 1.15)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.74, 1.15)
 use_as_traction = true
-wheel_friction_slip = 0.7
+wheel_roll_influence = 1.0
+wheel_friction_slip = 0.5
 suspension_stiffness = 120.0
 
 [node name="RR_Tyres Mesh" type="MeshInstance3D" parent="RR_Wheel"]
-transform = Transform3D(-4.28372e-08, -0.98, 4.28372e-08, 0, -4.28372e-08, -0.98, 0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
+transform = Transform3D(-4.28372e-08, -0.98, -4.28372e-08, 0, -4.28372e-08, 0.98, -0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 
@@ -486,13 +492,14 @@ mesh = SubResource("BoxMesh_mgawp")
 skeleton = NodePath("../../..")
 
 [node name="LR_Wheel" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.7, -1.15)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.74, -1.15)
 use_as_traction = true
-wheel_friction_slip = 0.7
+wheel_roll_influence = 1.0
+wheel_friction_slip = 0.5
 suspension_stiffness = 120.0
 
 [node name="LR_Tyres Mesh" type="MeshInstance3D" parent="LR_Wheel"]
-transform = Transform3D(-4.28372e-08, 0.98, -4.28372e-08, 0, -4.28372e-08, -0.98, -0.98, -4.28372e-08, 1.87247e-15, 0, 0, 0)
+transform = Transform3D(-4.28372e-08, 0.98, 4.28372e-08, 0, -4.28372e-08, 0.98, 0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_8pp75")
 skeleton = NodePath("../..")
 

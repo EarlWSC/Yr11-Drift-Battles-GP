@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://da12qpkvb4jfb"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_n78n6"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchor_right = 0.061
+anchor_bottom = 0.222
+offset_right = -0.272003
+offset_bottom = 0.143982
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n78n6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Garage" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Garage"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Garage" to="." method="_on_garage_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

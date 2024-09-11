@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://c2pmv41bvo8eq"]
 
 [ext_resource type="PackedScene" uid="uid://57cbs4l3mrxb" path="res://Scenes/mazda_mx_5.tscn" id="1_fkdu3"]
-[ext_resource type="Script" path="res://Scenes/Chase_Far.gd" id="2_f4g4w"]
+[ext_resource type="Script" path="res://Scripts/Chase_Far.gd" id="2_f4g4w"]
 [ext_resource type="PackedScene" uid="uid://cefrdx03hf84p" path="res://Assets/Stuff Ill Rename Later/lowpoly_racetrack/scene.gltf" id="3_4vdqy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g60h6"]
@@ -37,7 +37,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 environment = SubResource("Environment_k7gfs")
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(42.0365, 0, 0, 0, 0.673202, 0, 0, 0, 64.4978, -69.3391, -0.653596, 0)
+transform = Transform3D(-1.83747e-06, 0, -64.4978, 0, 0.673202, 0, 42.0365, 0, -2.81929e-06, -0.641876, -0.653596, 0)
 mesh = SubResource("BoxMesh_1s8a6")
 
 [node name="Sketchfab_Scene" parent="Ground" instance=ExtResource("3_4vdqy")]
@@ -50,9 +50,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.00545288, -3.87413, -0.0
 shape = SubResource("ConcavePolygonShape3D_bnsbb")
 
 [node name="Mazda Mx-5" parent="." instance=ExtResource("1_fkdu3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="camera_pivot_point" type="Node3D" parent="Mazda Mx-5"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.76837e-07, 0.109562, 2.84217e-14)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.57849e-15, 0.109562, -4.76837e-07)
 script = ExtResource("2_f4g4w")
 
 [node name="Camera3D" type="Camera3D" parent="Mazda Mx-5/camera_pivot_point"]

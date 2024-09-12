@@ -9,6 +9,7 @@ shader = ExtResource("2_ckk65")
 
 [node name="Gamemode" type="Control"]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -38,54 +39,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Race Day" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 430.0
-offset_top = 136.0
-offset_right = -446.0
-offset_bottom = -87.0
-text = "Race"
-
-[node name="Practice Session" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 773.0
-offset_top = 131.0
-offset_right = -121.0
-offset_bottom = -102.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Practice"
-
-[node name="Time Trials" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 114.0
-offset_top = 131.0
-offset_right = -780.0
-offset_bottom = -102.0
-text = "Time Trial"
-
 [node name="Title at the Top" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.375
-anchor_top = 0.06
-anchor_right = 0.604
-anchor_bottom = 0.196
-offset_left = -3.05176e-05
-offset_top = 0.119999
-offset_right = 0.420898
-offset_bottom = -0.143013
+anchor_right = 1.0
+anchor_bottom = 0.159
+offset_bottom = -0.0320053
 grow_horizontal = 2
-grow_vertical = 2
 color = Color(0.031307, 0.818269, 0.458237, 1)
 
 [node name="Text" type="Label" parent="Title at the Top"]
@@ -102,6 +62,38 @@ horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 160
 
-[connection signal="pressed" from="Race Day" to="." method="_on_race_day_pressed"]
-[connection signal="pressed" from="Practice Session" to="." method="_on_practice_session_pressed"]
-[connection signal="pressed" from="Time Trials" to="." method="_on_time_trials_pressed"]
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -493.0
+offset_top = -209.0
+offset_right = 493.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Race Day" type="Button" parent="BoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Race"
+
+[node name="Practice Session" type="Button" parent="BoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Practice"
+
+[node name="Time Trials" type="Button" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Time Trial"
+
+[connection signal="pressed" from="BoxContainer/Race Day" to="." method="_on_race_day_pressed"]
+[connection signal="pressed" from="BoxContainer/Practice Session" to="." method="_on_practice_session_pressed"]
+[connection signal="pressed" from="BoxContainer/Time Trials" to="." method="_on_time_trials_pressed"]

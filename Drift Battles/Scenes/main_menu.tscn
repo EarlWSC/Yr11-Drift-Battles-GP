@@ -23,13 +23,17 @@ script = ExtResource("1_s0wtg")
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_direction = 1
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 44.0
-offset_top = 227.0
-offset_right = -871.0
-offset_bottom = -194.0
+anchors_preset = -1
+anchor_left = 0.038
+anchor_top = 0.35
+anchor_right = 0.243
+anchor_bottom = 0.701
+offset_left = 0.261997
+offset_top = -0.149979
+offset_right = 0.306976
+offset_bottom = 0.0509338
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
 [node name="Play" type="Button" parent="Buttons"]
@@ -80,31 +84,33 @@ offset_left = 31.0
 offset_top = 28.0
 offset_right = -52.0
 offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="Title at the Top" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.351
-anchor_top = 0.108
-anchor_right = 0.58
-anchor_bottom = 0.243
-offset_left = -0.00100708
-offset_top = -0.0920029
-offset_right = 0.419922
-offset_bottom = 0.292984
+anchor_left = 0.384
+anchor_top = 0.048
+anchor_right = 0.604
+anchor_bottom = 0.182
+offset_left = 0.0159912
+offset_top = -0.151995
+offset_right = -0.204041
+offset_bottom = -0.117989
 grow_horizontal = 2
-grow_vertical = 2
 color = Color(0.031307, 0.818269, 0.458237, 1)
 
 [node name="Text" type="Label" parent="Title at the Top"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_right = 94.0
+offset_bottom = 49.0
 grow_horizontal = 2
-grow_vertical = 2
 text = "𝓖𝓣 𝓡𝓪𝓬𝓲𝓷𝓰 𝓒𝓵𝓾𝓫
 Home of the Champions"
 horizontal_alignment = 1

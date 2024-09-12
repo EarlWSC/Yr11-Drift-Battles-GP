@@ -72,11 +72,14 @@ expand_mode = 2
 modulate = Color(0.79315, 0.180724, 0.769873, 1)
 material = SubResource("ShaderMaterial_1hqg2")
 layout_direction = 1
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 31.0
 offset_top = 28.0
-offset_right = 1100.0
-offset_bottom = 626.0
+offset_right = -52.0
+offset_bottom = -22.0
 mouse_filter = 2
 
 [node name="Title at the Top" type="ColorRect" parent="."]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://c27osnym5qqva"]
+
+[ext_resource type="Texture2D" uid="uid://cttcjfbbcs5f6" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="1_bnbmx"]
+[ext_resource type="Script" path="res://Scripts/gamemode.gd" id="1_mrkiw"]
+[ext_resource type="Shader" path="res://Scenes/main_menu.gdshader" id="2_ckk65"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uvfvu"]
+shader = ExtResource("2_ckk65")
+
+[node name="Gamemode" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mrkiw")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = -1.0
+offset_bottom = 0.297974
+mouse_filter = 2
+texture = ExtResource("1_bnbmx")
+expand_mode = 2
+
+[node name="Backdrop Blur" type="Panel" parent="Background"]
+modulate = Color(0.79315, 0.180724, 0.769873, 1)
+material = SubResource("ShaderMaterial_uvfvu")
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Race Day" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 135.0
+offset_right = 692.0
+offset_bottom = 550.0
+text = "Race"
+
+[node name="Practice Session" type="Button" parent="."]
+offset_left = 773.0
+offset_top = 131.0
+offset_right = 1031.0
+offset_bottom = 546.0
+text = "Practice"
+
+[node name="Time Trials" type="Button" parent="."]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 131.0
+offset_right = 372.0
+offset_bottom = 546.0
+text = "Time Trial"
+
+[node name="Title at the Top" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.351
+anchor_top = 0.108
+anchor_right = 0.58
+anchor_bottom = 0.243
+offset_left = 27.648
+offset_top = -30.984
+offset_right = 28.0689
+offset_bottom = -30.599
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.031307, 0.818269, 0.458237, 1)
+
+[node name="Text" type="Label" parent="Title at the Top"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "𝓖𝓣 𝓡𝓪𝓬𝓲𝓷𝓰 𝓒𝓵𝓾𝓫
+Home of the Champions"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 160
+
+[connection signal="pressed" from="Race Day" to="." method="_on_race_day_pressed"]
+[connection signal="pressed" from="Practice Session" to="." method="_on_practice_session_pressed"]
+[connection signal="pressed" from="Time Trials" to="." method="_on_time_trials_pressed"]

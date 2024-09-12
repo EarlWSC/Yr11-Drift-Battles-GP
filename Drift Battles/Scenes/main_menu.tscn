@@ -1,45 +1,115 @@
-[gd_scene load_steps=2 format=3 uid="uid://da12qpkvb4jfb"]
+[gd_scene load_steps=5 format=3 uid="uid://da12qpkvb4jfb"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_s0wtg"]
+[ext_resource type="Texture2D" uid="uid://cttcjfbbcs5f6" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="2_fwv5t"]
+[ext_resource type="Shader" path="res://Scenes/main_menu.gdshader" id="3_lkm6m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1hqg2"]
+shader = ExtResource("3_lkm6m")
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
-anchor_right = 0.061
-anchor_bottom = 0.222
-offset_right = -0.272003
-offset_bottom = 0.143982
+anchor_right = 1.001
+anchor_bottom = 1.002
+offset_right = -2.1521
+offset_bottom = -0.296082
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 9.79
 script = ExtResource("1_s0wtg")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_left = 527.0
-offset_top = 250.0
-offset_right = 597.0
-offset_bottom = 386.0
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 44.0
+offset_top = 227.0
+offset_right = -871.0
+offset_bottom = -194.0
+alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Play"
+alignment = 0
+vertical_icon_alignment = 2
 
-[node name="Garage" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Garage" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Garage"
+alignment = 0
+vertical_icon_alignment = 2
 
-[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Settings" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Options"
+alignment = 0
+vertical_icon_alignment = 2
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Quit"
+alignment = 0
+vertical_icon_alignment = 2
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Garage" to="." method="_on_garage_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.998
+offset_left = -1.0
+offset_bottom = 0.297974
+mouse_filter = 2
+texture = ExtResource("2_fwv5t")
+expand_mode = 2
+
+[node name="Backdrop Blur" type="Panel" parent="Background"]
+modulate = Color(0.79315, 0.180724, 0.769873, 1)
+material = SubResource("ShaderMaterial_1hqg2")
+layout_direction = 1
+layout_mode = 0
+offset_left = 31.0
+offset_top = 28.0
+offset_right = 1100.0
+offset_bottom = 626.0
+mouse_filter = 2
+
+[node name="Title at the Top" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.351
+anchor_top = 0.108
+anchor_right = 0.58
+anchor_bottom = 0.243
+offset_left = -0.00100708
+offset_top = -0.0920029
+offset_right = 0.419922
+offset_bottom = 0.292984
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.031307, 0.818269, 0.458237, 1)
+
+[node name="Text" type="Label" parent="Title at the Top"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "𝓖𝓣 𝓡𝓪𝓬𝓲𝓷𝓰 𝓒𝓵𝓾𝓫
+Home of the Champions"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 160
+
+[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Play" to="Buttons/Play" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Garage" to="." method="_on_garage_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]

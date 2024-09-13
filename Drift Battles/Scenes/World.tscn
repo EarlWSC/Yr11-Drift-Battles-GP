@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c2pmv41bvo8eq"]
 
 [ext_resource type="PackedScene" uid="uid://57cbs4l3mrxb" path="res://Scenes/mazda_mx_5.tscn" id="1_fkdu3"]
+[ext_resource type="PackedScene" uid="uid://tr02xc65sak" path="res://Assets/Stuff Ill Rename Later/testtrack.glb" id="1_ph3so"]
 [ext_resource type="Script" path="res://Scripts/Chase_Far.gd" id="2_f4g4w"]
-[ext_resource type="PackedScene" uid="uid://cefrdx03hf84p" path="res://Assets/Stuff Ill Rename Later/lowpoly_racetrack/scene.gltf" id="3_4vdqy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g60h6"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -40,8 +40,8 @@ environment = SubResource("Environment_k7gfs")
 transform = Transform3D(-1.83747e-06, 0, -64.4978, 0, 0.673202, 0, 42.0365, 0, -2.81929e-06, -0.641876, -0.653596, 0)
 mesh = SubResource("BoxMesh_1s8a6")
 
-[node name="Sketchfab_Scene" parent="Ground" instance=ExtResource("3_4vdqy")]
-transform = Transform3D(-1.8912e-09, 0, 0.0432657, 0, 2.9056, 0, -0.0355762, 0, -1.55509e-09, 2, 0, 0)
+[node name="testtrack" parent="Ground" instance=ExtResource("1_ph3so")]
+transform = Transform3D(-1.02285e-09, 0, 0.039, 0, 2.43844, 0, -0.0234, 0, -1.70474e-09, 1.61764, -1.3113e-06, -4.56348e-08)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 

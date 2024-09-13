@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_s0wtg"]
 [ext_resource type="Texture2D" uid="uid://cttcjfbbcs5f6" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="2_fwv5t"]
-[ext_resource type="Shader" path="res://Scenes/main_menu.gdshader" id="3_lkm6m"]
+[ext_resource type="Shader" path="res://Assets/main_menu.gdshader" id="3_lkm6m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1hqg2"]
 shader = ExtResource("3_lkm6m")
@@ -36,29 +36,73 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Play" type="Button" parent="Buttons"]
+[node name="PlayButton" type="Button" parent="Buttons"]
 layout_mode = 2
+text = " "
+alignment = 0
+vertical_icon_alignment = 2
+
+[node name="PlayText" type="Label" parent="Buttons/PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
 text = "Play"
+vertical_alignment = 1
+
+[node name="GarageButton" type="Button" parent="Buttons"]
+layout_mode = 2
+text = " "
 alignment = 0
 vertical_icon_alignment = 2
 
-[node name="Garage" type="Button" parent="Buttons"]
-layout_mode = 2
+[node name="GarageText" type="Label" parent="Buttons/GarageButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
 text = "Garage"
+vertical_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="Buttons"]
+layout_mode = 2
+text = " "
 alignment = 0
 vertical_icon_alignment = 2
 
-[node name="Settings" type="Button" parent="Buttons"]
+[node name="SettingsText" type="Label" parent="Buttons/SettingsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+vertical_alignment = 1
+
+[node name="QuitButton" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "Options"
+text = " "
 alignment = 0
 vertical_icon_alignment = 2
 
-[node name="Quit" type="Button" parent="Buttons"]
-layout_mode = 2
+[node name="SettingsText" type="Label" parent="Buttons/QuitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
 text = "Quit"
-alignment = 0
-vertical_icon_alignment = 2
+vertical_alignment = 1
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -1
@@ -80,45 +124,37 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = 28.0
-offset_right = -52.0
-offset_bottom = -22.0
+offset_left = 1.0
+offset_top = 1.0
+offset_bottom = 1.00012
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
 [node name="Title at the Top" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.384
-anchor_top = 0.048
-anchor_right = 0.604
-anchor_bottom = 0.182
-offset_left = 0.0159912
-offset_top = -0.151995
-offset_right = -0.204041
-offset_bottom = -0.117989
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 116.0
 grow_horizontal = 2
+scale = Vector2(1.01075, 1)
 color = Color(0.031307, 0.818269, 0.458237, 1)
 
 [node name="Text" type="Label" parent="Title at the Top"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -94.0
-offset_right = 94.0
-offset_bottom = 49.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 text = "𝓖𝓣 𝓡𝓪𝓬𝓲𝓷𝓰 𝓒𝓵𝓾𝓫
 Home of the Champions"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 160
 
-[connection signal="pressed" from="Buttons/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Buttons/Play" to="Buttons/Play" method="_on_pressed"]
-[connection signal="pressed" from="Buttons/Garage" to="." method="_on_garage_pressed"]
-[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/PlayButton" to="Buttons/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/GarageButton" to="." method="_on_garage_pressed"]
+[connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_pressed"]

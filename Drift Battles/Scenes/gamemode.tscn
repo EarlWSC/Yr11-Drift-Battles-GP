@@ -16,6 +16,105 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mrkiw")
 
+[node name="gamemode" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -493.0
+offset_top = -185.0
+offset_right = 493.0
+offset_bottom = 233.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RaceButton" type="Button" parent="gamemode"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="RaceText" type="Label" parent="gamemode/RaceButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Race"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PracticeButton" type="Button" parent="gamemode"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="PracticeText" type="Label" parent="gamemode/PracticeButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Practice"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TTButton" type="Button" parent="gamemode"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="TTText" type="Label" parent="gamemode/TTButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Time Trial"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="backbox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.895
+anchor_top = 0.904
+anchor_right = 0.978
+anchor_bottom = 0.966
+offset_left = -0.0400391
+offset_top = 0.207947
+offset_right = 0.343994
+offset_bottom = 0.0319824
+
+[node name="BackButton" type="Button" parent="backbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="BackText" type="Label" parent="backbox/BackButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="Background" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 1
@@ -44,7 +143,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.159
-offset_bottom = -0.0320053
+offset_bottom = 22.968
 grow_horizontal = 2
 color = Color(0.031307, 0.818269, 0.458237, 1)
 
@@ -64,106 +163,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 160
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -493.0
-offset_top = -209.0
-offset_right = 493.0
-offset_bottom = 209.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="RaceButton" type="Button" parent="BoxContainer"]
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 3
-text = " "
-
-[node name="RaceText" type="Label" parent="BoxContainer/RaceButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 70
-text = "Race"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PracticeButton" type="Button" parent="BoxContainer"]
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 3
-text = " "
-
-[node name="PracticeText" type="Label" parent="BoxContainer/PracticeButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 70
-text = "Practice"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TTButton" type="Button" parent="BoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = " "
-
-[node name="TTText" type="Label" parent="BoxContainer/TTButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 70
-text = "Time Trial"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.895
-anchor_top = 0.904
-anchor_right = 0.978
-anchor_bottom = 0.966
-offset_left = -0.0400391
-offset_top = 0.207947
-offset_right = 0.343994
-offset_bottom = 0.0319824
-
-[node name="BackButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = " "
-
-[node name="BackText" type="Label" parent="HBoxContainer/BackButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Back"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[connection signal="pressed" from="BoxContainer/RaceButton" to="." method="_on_race_day_pressed"]
-[connection signal="pressed" from="BoxContainer/PracticeButton" to="." method="_on_practice_session_pressed"]
-[connection signal="pressed" from="BoxContainer/TTButton" to="." method="_on_time_trials_pressed"]
-[connection signal="pressed" from="HBoxContainer/BackButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="gamemode/RaceButton" to="." method="_on_race_day_pressed"]
+[connection signal="pressed" from="gamemode/PracticeButton" to="." method="_on_practice_session_pressed"]
+[connection signal="pressed" from="gamemode/TTButton" to="." method="_on_time_trials_pressed"]
+[connection signal="pressed" from="backbox/BackButton" to="." method="_on_back_pressed"]

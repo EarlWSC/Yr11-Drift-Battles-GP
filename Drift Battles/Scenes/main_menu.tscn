@@ -25,22 +25,24 @@ layout_direction = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.038
-anchor_top = 0.35
+anchor_top = 0.345
 anchor_right = 0.308
 anchor_bottom = 0.857
-offset_left = 0.262001
-offset_top = -14.1499
+offset_left = 0.261997
+offset_top = 0.0950165
 offset_right = -0.508026
-offset_bottom = -0.192932
+offset_bottom = -0.192871
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 layout_mode = 2
+size_flags_vertical = 3
 text = " "
 alignment = 0
-vertical_icon_alignment = 2
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="PlayText" type="Label" parent="Buttons/PlayButton"]
 layout_mode = 1
@@ -55,9 +57,12 @@ vertical_alignment = 1
 
 [node name="GarageButton" type="Button" parent="Buttons"]
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
 text = " "
 alignment = 0
-vertical_icon_alignment = 2
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="GarageText" type="Label" parent="Buttons/GarageButton"]
 layout_mode = 1
@@ -72,9 +77,12 @@ vertical_alignment = 1
 
 [node name="SettingsButton" type="Button" parent="Buttons"]
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
 text = " "
 alignment = 0
-vertical_icon_alignment = 2
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="SettingsText" type="Label" parent="Buttons/SettingsButton"]
 layout_mode = 1
@@ -89,9 +97,12 @@ vertical_alignment = 1
 
 [node name="QuitButton" type="Button" parent="Buttons"]
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
 text = " "
 alignment = 0
-vertical_icon_alignment = 2
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="SettingsText" type="Label" parent="Buttons/QuitButton"]
 layout_mode = 1
@@ -133,9 +144,11 @@ mouse_filter = 2
 
 [node name="Title at the Top" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = -1
 anchor_right = 1.0
-offset_bottom = 116.0
+anchor_bottom = 0.179
+offset_right = -12.0
+offset_bottom = -0.170982
 grow_horizontal = 2
 scale = Vector2(1.01075, 1)
 color = Color(0.031307, 0.818269, 0.458237, 1)
@@ -147,6 +160,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 40
 text = "𝓖𝓣 𝓡𝓪𝓬𝓲𝓷𝓰 𝓒𝓵𝓾𝓫
 Home of the Champions"
 horizontal_alignment = 1

@@ -13,10 +13,10 @@ dest_files=["res://.godot/imported/scene.gltf-f5fc6fde0b37cdcafd74b6f06582ca9f.s
 
 [params]
 
-nodes/root_type=""
-nodes/root_name=""
+nodes/root_type="Node3D"
+nodes/root_name="Tridenburg"
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.001
 nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -31,6 +31,21 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material.004": {
+"use_external/enabled": true,
+"use_external/path": ""
+}
+},
+"nodes": {
+"PATH:Sketchfab_model": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/root": {
+"import/skip_import": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

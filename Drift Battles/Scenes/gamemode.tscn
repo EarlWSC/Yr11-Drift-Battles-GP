@@ -18,15 +18,15 @@ script = ExtResource("1_mrkiw")
 
 [node name="gamemode" type="BoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -493.0
-offset_top = -185.0
-offset_right = 493.0
-offset_bottom = 233.0
+anchors_preset = -1
+anchor_left = 0.072
+anchor_top = 0.215
+anchor_right = 0.928
+anchor_bottom = 0.86
+offset_left = 0.0559921
+offset_top = -0.320007
+offset_right = -0.0560303
+offset_bottom = -0.280029
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1

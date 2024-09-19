@@ -1,0 +1,11 @@
+Model Information:
+* title:	MotoGp Argentina Track
+* source:	https://sketchfab.com/3d-models/motogp-argentina-track-ad3bf1202bed483ab6d32bf6b54902b9
+* author:	antoniopepe (https://sketchfab.com/antoniopepe)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "MotoGp Argentina Track" (https://sketchfab.com/3d-models/motogp-argentina-track-ad3bf1202bed483ab6d32bf6b54902b9) by antoniopepe (https://sketchfab.com/antoniopepe) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

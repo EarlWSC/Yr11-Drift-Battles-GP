@@ -1,0 +1,11 @@
+Model Information:
+* title:	Asset of low-poly cars Part 2
+* source:	https://sketchfab.com/3d-models/asset-of-low-poly-cars-part-2-55e75735c7144234b7016d0f7fa50dd4
+* author:	Qualix_studio (https://sketchfab.com/steam813)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Asset of low-poly cars Part 2" (https://sketchfab.com/3d-models/asset-of-low-poly-cars-part-2-55e75735c7144234b7016d0f7fa50dd4) by Qualix_studio (https://sketchfab.com/steam813) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

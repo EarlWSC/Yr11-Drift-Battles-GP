@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bp65iocf16xjy"]
 
 [ext_resource type="Script" path="res://Scripts/circuit_select.gd" id="1_irpks"]
-[ext_resource type="Texture2D" uid="uid://cttcjfbbcs5f6" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="2_jncgu"]
-[ext_resource type="Texture2D" uid="uid://8yuy4pmyup2g" path="res://Assets/circuitgallery/silverstone.png" id="2_opdgo"]
-[ext_resource type="Texture2D" uid="uid://d1dbdrxj6vqel" path="res://Assets/circuitgallery/interlagos.png" id="3_2pmrt"]
+[ext_resource type="Texture2D" path="res://Assets/circuitgallery/Tsukuba.png" id="2_7e8w6"]
+[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="2_jncgu"]
+[ext_resource type="Texture2D" path="res://Assets/circuitgallery/Jerez.png" id="3_eofbc"]
 [ext_resource type="Shader" path="res://Assets/main_menu.gdshader" id="3_j237y"]
-[ext_resource type="Texture2D" uid="uid://4fgjn110d0jy" path="res://Assets/circuitgallery/spa-francorchamps.png" id="4_5ill8"]
-[ext_resource type="Texture2D" uid="uid://cbhg657ynreii" path="res://Assets/circuitgallery/nordschliefe.png" id="5_fs2jq"]
+[ext_resource type="Texture2D" path="res://Assets/circuitgallery/Argentina.png" id="4_eoys6"]
+[ext_resource type="Texture2D" path="res://Assets/circuitgallery/nordschliefe.png" id="5_fs2jq"]
 
 [sub_resource type="FontFile" id="FontFile_fpdc8"]
 cache/0/20/0/ascent = 0.0
@@ -89,47 +89,46 @@ offset_bottom = -0.0720215
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="silverstone" type="Button" parent="circuits"]
+[node name="tsukuba" type="Button" parent="circuits"]
 visibility_layer = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_fpdc8")
 theme_override_font_sizes/font_size = 20
-text = "Silverstone"
-icon = ExtResource("2_opdgo")
+text = "Tsukuba Circuit"
+icon = ExtResource("2_7e8w6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="interlagos" type="Button" parent="circuits"]
+[node name="jerez" type="Button" parent="circuits"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_fpdc8")
 theme_override_font_sizes/font_size = 20
-text = "Interlagos"
-icon = ExtResource("3_2pmrt")
+text = "Jerez Circuit"
+icon = ExtResource("3_eofbc")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="spa-francorchamps" type="Button" parent="circuits"]
+[node name="argentina" type="Button" parent="circuits"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_fpdc8")
 theme_override_font_sizes/font_size = 20
-text = "Spa-Francorchamps"
-icon = ExtResource("4_5ill8")
+text = "Argentina Circuit"
+icon = ExtResource("4_eoys6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="bahrain" type="Button" parent="circuits"]
+[node name="split" type="Button" parent="circuits"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -137,7 +136,8 @@ theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_fpdc8")
 theme_override_font_sizes/font_size = 20
-text = "Nurburgring-Nordschliefe"
+text = "Split Track Circuit
+(PRACTICE ONLY)"
 icon = ExtResource("5_fs2jq")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -200,8 +200,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[connection signal="pressed" from="circuits/silverstone" to="." method="_on_silverstone_pressed"]
-[connection signal="pressed" from="circuits/interlagos" to="." method="_on_interlagos_pressed"]
-[connection signal="pressed" from="circuits/spa-francorchamps" to="." method="_on_spafrancorchamps_pressed"]
-[connection signal="pressed" from="circuits/bahrain" to="." method="_on_nordschliefe_pressed"]
+[connection signal="pressed" from="circuits/tsukuba" to="." method="_on_tsukuba_pressed"]
+[connection signal="pressed" from="circuits/jerez" to="." method="_on_interlagos_pressed"]
+[connection signal="pressed" from="circuits/argentina" to="." method="_on_spafrancorchamps_pressed"]
+[connection signal="pressed" from="circuits/split" to="." method="_on_nordschliefe_pressed"]
 [connection signal="pressed" from="backbox/BackButton" to="." method="_on_back_button_pressed"]

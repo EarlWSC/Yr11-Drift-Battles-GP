@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c27osnym5qqva"]
 
-[ext_resource type="Texture2D" uid="uid://cttcjfbbcs5f6" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="1_bnbmx"]
+[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/GT NZ Championships.jpg" id="1_bnbmx"]
 [ext_resource type="Script" path="res://Scripts/gamemode.gd" id="1_mrkiw"]
 [ext_resource type="Shader" path="res://Assets/main_menu.gdshader" id="2_ckk65"]
 

@@ -1,50 +1,31 @@
-[gd_scene load_steps=236 format=4 uid="uid://c2pmv41bvo8eq"]
+[gd_scene load_steps=240 format=4 uid="uid://c2pmv41bvo8eq"]
 
+[ext_resource type="Script" path="res://Scripts/ingamehud.gd" id="1_8sg2w"]
 [ext_resource type="PackedScene" uid="uid://57cbs4l3mrxb" path="res://Scenes/mazda_mx_5.tscn" id="1_fkdu3"]
 [ext_resource type="Script" path="res://Scripts/Chase_Far.gd" id="2_f4g4w"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/TSUKUB1_baseColor.png" id="3_nmr7u"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Warehouse_etc_baseColor.png" id="4_lwp08"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/BarriersTSU_baseColor.png" id="5_s1fnl"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Material_677_baseColor.png" id="6_kf4fb"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Material_677_normal.png" id="7_0d38p"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Material__94_baseColor.png" id="8_7yqgu"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Material__32_baseColor.png" id="9_k4v0s"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/ASPH2_baseColor.png" id="10_qansv"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Grass_baseColor.png" id="11_ldxr7"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/BarriersCONC_baseColor.png" id="12_gh0nw"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Kerb_baseColor.png" id="13_onfsp"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Asph_baseColor.png" id="14_lgc1x"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Aqua_baseColor.png" id="15_0o18d"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/fence_baseColor.png" id="16_rdugw"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/outerbarrier_baseColor.png" id="17_bafd4"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Mountains_baseColor.png" id="18_uoa2i"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Asphalt_baseColor.png" id="19_68m02"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/TSUKUB2_baseColor.png" id="20_rw2ig"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Forest_baseColor.png" id="21_mc4uf"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Foilage_baseColor.png" id="22_y1lve"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/Grass2_baseColor.png" id="23_7qp0q"]
-[ext_resource type="Texture2D" path="res://Assets/Stuff Ill Rename Later/low_poly_tsukuba_circuit/textures/BrownedGrass_baseColor.png" id="24_sf1k5"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g60h6"]
-sky_top_color = Color(1, 1, 1, 1)
-sky_horizon_color = Color(0.505882, 0.682353, 0.796078, 1)
-sky_curve = 0.439226
-ground_bottom_color = Color(0.72549, 0.705882, 0.709804, 1)
-ground_horizon_color = Color(0.54902, 0.764706, 0.862745, 1)
-
-[sub_resource type="Sky" id="Sky_od0oc"]
-resource_local_to_scene = true
-sky_material = SubResource("ProceduralSkyMaterial_g60h6")
-
-[sub_resource type="Environment" id="Environment_k7gfs"]
-background_mode = 2
-sky = SubResource("Sky_od0oc")
-sky_custom_fov = 106.5
-ambient_light_color = Color(0.65506, 0.519132, 0.240495, 1)
-ambient_light_energy = 16.0
-reflected_light_source = 2
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="Texture2D" uid="uid://bia1shdibyaow" path="res://Assets/models/tsukubacircuit_lp/textures/TSUKUB1_baseColor.png" id="3_nmr7u"]
+[ext_resource type="Texture2D" uid="uid://fnba4khmi12i" path="res://Assets/models/tsukubacircuit_lp/textures/Warehouse_etc_baseColor.png" id="4_lwp08"]
+[ext_resource type="Texture2D" uid="uid://dy2gnh2ybbvuk" path="res://Assets/models/tsukubacircuit_lp/textures/BarriersTSU_baseColor.png" id="5_s1fnl"]
+[ext_resource type="Texture2D" uid="uid://du4pixmqi86yj" path="res://Assets/models/tsukubacircuit_lp/textures/Material_677_baseColor.png" id="6_kf4fb"]
+[ext_resource type="Texture2D" uid="uid://cih2o40nu68q" path="res://Assets/models/tsukubacircuit_lp/textures/Material_677_normal.png" id="7_0d38p"]
+[ext_resource type="Texture2D" uid="uid://cdfm0mr0bma0m" path="res://Assets/models/tsukubacircuit_lp/textures/Material__94_baseColor.png" id="8_7yqgu"]
+[ext_resource type="Texture2D" uid="uid://b4c1niahqdlj1" path="res://Assets/models/tsukubacircuit_lp/textures/Material__32_baseColor.png" id="9_k4v0s"]
+[ext_resource type="Texture2D" uid="uid://cr81221i6fbv8" path="res://Assets/models/tsukubacircuit_lp/textures/ASPH2_baseColor.png" id="10_qansv"]
+[ext_resource type="Texture2D" uid="uid://uamtonw3sk27" path="res://Assets/models/tsukubacircuit_lp/textures/Grass_baseColor.png" id="11_ldxr7"]
+[ext_resource type="Texture2D" uid="uid://b647sea55swmb" path="res://Assets/models/tsukubacircuit_lp/textures/BarriersCONC_baseColor.png" id="12_gh0nw"]
+[ext_resource type="Texture2D" uid="uid://d0ro4ge7tr8u4" path="res://Assets/models/tsukubacircuit_lp/textures/Kerb_baseColor.png" id="13_onfsp"]
+[ext_resource type="Texture2D" uid="uid://bg2s6ystcpxgw" path="res://Assets/models/tsukubacircuit_lp/textures/Asph_baseColor.png" id="14_lgc1x"]
+[ext_resource type="Texture2D" uid="uid://b8ypwktsccfx" path="res://Assets/models/tsukubacircuit_lp/textures/Aqua_baseColor.png" id="15_0o18d"]
+[ext_resource type="Texture2D" uid="uid://vgedlgh1fuhk" path="res://Assets/models/tsukubacircuit_lp/textures/fence_baseColor.png" id="16_rdugw"]
+[ext_resource type="Texture2D" uid="uid://b63c5tfu5vdxc" path="res://Assets/models/tsukubacircuit_lp/textures/outerbarrier_baseColor.png" id="17_bafd4"]
+[ext_resource type="Texture2D" uid="uid://b0swsehc54k8l" path="res://Assets/models/tsukubacircuit_lp/textures/Mountains_baseColor.png" id="18_uoa2i"]
+[ext_resource type="Texture2D" uid="uid://ni3cn4lpj53u" path="res://Assets/models/tsukubacircuit_lp/textures/Asphalt_baseColor.png" id="19_68m02"]
+[ext_resource type="Texture2D" uid="uid://q20ngk1kmtft" path="res://Assets/models/tsukubacircuit_lp/textures/TSUKUB2_baseColor.png" id="20_rw2ig"]
+[ext_resource type="Texture2D" uid="uid://0dqejeyobxfb" path="res://Assets/models/tsukubacircuit_lp/textures/Forest_baseColor.png" id="21_mc4uf"]
+[ext_resource type="Texture2D" uid="uid://d2p2afe17q0g4" path="res://Assets/models/tsukubacircuit_lp/textures/Foilage_baseColor.png" id="22_y1lve"]
+[ext_resource type="Texture2D" uid="uid://d12hskcfkk1g0" path="res://Assets/models/tsukubacircuit_lp/textures/Grass2_baseColor.png" id="23_7qp0q"]
+[ext_resource type="Texture2D" uid="uid://c6c7c5v47ktk0" path="res://Assets/models/tsukubacircuit_lp/textures/BrownedGrass_baseColor.png" id="24_sf1k5"]
+[ext_resource type="Texture2D" uid="uid://bpg4rukvq2wi4" path="res://Assets/models/unsorted_images/skybox.jpeg" id="25_t2mq8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3he5"]
 resource_name = "TSUKUB1"
@@ -1789,7 +1770,7 @@ cull_mode = 2
 albedo_texture = ExtResource("18_uoa2i")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_qwang"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jdmr5"]
 _surfaces = [{
 "aabb": AABB(-9.67568, -0.331986, -22.391, 35.4482, 3.38575, 18.4424),
 "format": 34896613377,
@@ -1819,7 +1800,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAOR9ImD//wAA///gSm8UAADgVjZhDioAAL8xRWY0QwAAMBWFb+JfAAChBYN4hn8AAAAAZ3+FoQAA+gc+diTCAABiHxtrMd0AAG1I1Fzm7gAA4YSlT9j3AAC8xqRKAAD//+R9ImD////////gSm8U///gVjZhDir+/78xRWY0Q///MBWFb+Jf/v+hBYN4hn/+/wAAZ3+Fof7/+gc+diTC//9iHxtrMd3//21I1Fzm7v//4YSlT9j3//+8xqRK/38AAP9/////fwAA/38AAP9/AAD/fwAA/3/+//9/////f////3////9/////f////38AAP9/////fwAA/38AAP9/AAD/fwAA/3/+//9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_qwang")
+shadow_mesh = SubResource("ArrayMesh_jdmr5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esjfv"]
 resource_name = "Asphalt"
@@ -2383,10 +2364,40 @@ shadow_mesh = SubResource("ArrayMesh_i4os6")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uu036"]
 data = PackedVector3Array(0.7733, 0.1194, 0.8446, 0.6401, 0.1194, 0.8446, 0.7675, 0.1195, 0.6222, 0.6342, 0.2408, 0.6222, 0.7675, 0.2408, 0.6222, 0.6401, 0.2407, 0.8446, 0.635, 0.5624, 0.6527, 0.7965, 0.5628, 0.3703, 0.8043, 0.5624, 0.6527, 0.7965, 0.5628, 0.3703, 0.635, 0.5624, 0.6527, 0.4579, 0.5628, 0.3703, 0.4579, 0.5628, 0.3703, 0.635, 0.5624, 0.6527, 0.4657, 0.5624, 0.6527, 0.6342, 0.4527, 0.6225, 0.7675, 0.5233, 0.6226, 0.7675, 0.4527, 0.6225, 0.6342, 0.4527, 0.6225, 0.6342, 0.5233, 0.6226, 0.7675, 0.5233, 0.6226, 0.4948, 0.2411, 0.3999, 0.7613, 0.1198, 0.3999, 0.7613, 0.2411, 0.3999, 0.4948, 0.2411, 0.3999, 0.4948, 0.1198, 0.3999, 0.7613, 0.1198, 0.3999, 0.5009, 0.1195, 0.6222, 0.4948, 0.2411, 0.3999, 0.5009, 0.2408, 0.6222, 0.5009, 0.1195, 0.6222, 0.4948, 0.1198, 0.3999, 0.4948, 0.2411, 0.3999, 0.5068, 0.1194, 0.8446, 0.5009, 0.2408, 0.6222, 0.5068, 0.2407, 0.8446, 0.5068, 0.1194, 0.8446, 0.5009, 0.1195, 0.6222, 0.5009, 0.2408, 0.6222, 0.7613, 0.1198, 0.3999, 0.7675, 0.2408, 0.6222, 0.7613, 0.2411, 0.3999, 0.7613, 0.1198, 0.3999, 0.7675, 0.1195, 0.6222, 0.7675, 0.2408, 0.6222, 0.6342, 0.5233, 0.6226, 0.8043, 0.5232, 0.6526, 0.7675, 0.5233, 0.6226, 0.6342, 0.5233, 0.6226, 0.635, 0.5232, 0.6526, 0.8043, 0.5232, 0.6526, 0.7675, 0.4527, 0.6225, 0.7613, 0.5235, 0.4003, 0.7613, 0.4529, 0.4002, 0.7675, 0.4527, 0.6225, 0.7675, 0.5233, 0.6226, 0.7613, 0.5235, 0.4003, 0.4948, 0.4529, 0.4002, 0.5009, 0.5233, 0.6226, 0.5009, 0.4527, 0.6225, 0.4948, 0.4529, 0.4002, 0.4948, 0.5235, 0.4003, 0.5009, 0.5233, 0.6226, 0.7613, 0.4529, 0.4002, 0.4948, 0.5235, 0.4003, 0.4948, 0.4529, 0.4002, 0.7613, 0.4529, 0.4002, 0.7613, 0.5235, 0.4003, 0.4948, 0.5235, 0.4003, 0.8043, 0.5232, 0.6526, 0.7965, 0.5628, 0.3703, 0.7965, 0.5236, 0.3703, 0.8043, 0.5232, 0.6526, 0.8043, 0.5624, 0.6527, 0.7965, 0.5628, 0.3703, 0.7675, 0.5233, 0.6226, 0.7965, 0.5236, 0.3703, 0.7613, 0.5235, 0.4003, 0.7675, 0.5233, 0.6226, 0.8043, 0.5232, 0.6526, 0.7965, 0.5236, 0.3703, 0.7613, 0.5235, 0.4003, 0.4579, 0.5236, 0.3703, 0.4948, 0.5235, 0.4003, 0.7613, 0.5235, 0.4003, 0.7965, 0.5236, 0.3703, 0.4579, 0.5236, 0.3703, 0.4948, 0.5235, 0.4003, 0.4657, 0.5232, 0.6526, 0.5009, 0.5233, 0.6226, 0.4948, 0.5235, 0.4003, 0.4579, 0.5236, 0.3703, 0.4657, 0.5232, 0.6526, 0.7965, 0.5236, 0.3703, 0.4579, 0.5628, 0.3703, 0.4579, 0.5236, 0.3703, 0.7965, 0.5236, 0.3703, 0.7965, 0.5628, 0.3703, 0.4579, 0.5628, 0.3703, 0.4579, 0.5236, 0.3703, 0.4657, 0.5624, 0.6527, 0.4657, 0.5232, 0.6526, 0.4579, 0.5236, 0.3703, 0.4579, 0.5628, 0.3703, 0.4657, 0.5624, 0.6527, 0.635, 0.5232, 0.6526, 0.8043, 0.5624, 0.6527, 0.8043, 0.5232, 0.6526, 0.635, 0.5232, 0.6526, 0.635, 0.5624, 0.6527, 0.8043, 0.5624, 0.6527, 0.7613, 0.2411, 0.3999, 0.4948, 0.3823, 0.4001, 0.4948, 0.2411, 0.3999, 0.7613, 0.2411, 0.3999, 0.7613, 0.3823, 0.4001, 0.4948, 0.3823, 0.4001, 0.4948, 0.2411, 0.3999, 0.5009, 0.3821, 0.6224, 0.5009, 0.2408, 0.6222, 0.4948, 0.2411, 0.3999, 0.4948, 0.3823, 0.4001, 0.5009, 0.3821, 0.6224, 0.7675, 0.2408, 0.6222, 0.7613, 0.3823, 0.4001, 0.7613, 0.2411, 0.3999, 0.7675, 0.2408, 0.6222, 0.7675, 0.3821, 0.6224, 0.7613, 0.3823, 0.4001, 0.6342, 0.2408, 0.6222, 0.7675, 0.3821, 0.6224, 0.7675, 0.2408, 0.6222, 0.6342, 0.2408, 0.6222, 0.6342, 0.3821, 0.6224, 0.7675, 0.3821, 0.6224, 0.4948, 0.4529, 0.4002, 0.789, 0.4522, 0.3766, 0.7613, 0.4529, 0.4002, 0.4948, 0.4529, 0.4002, 0.4658, 0.4522, 0.3766, 0.789, 0.4522, 0.3766, 0.7613, 0.4529, 0.4002, 0.7965, 0.452, 0.6461, 0.7675, 0.4527, 0.6225, 0.7613, 0.4529, 0.4002, 0.789, 0.4522, 0.3766, 0.7965, 0.452, 0.6461, 0.4948, 0.3823, 0.4001, 0.4732, 0.3828, 0.646, 0.5009, 0.3821, 0.6224, 0.4948, 0.3823, 0.4001, 0.4658, 0.383, 0.3765, 0.4732, 0.3828, 0.646, 0.6342, 0.3821, 0.6224, 0.7965, 0.3828, 0.646, 0.7675, 0.3821, 0.6224, 0.6342, 0.3821, 0.6224, 0.6348, 0.3828, 0.646, 0.7965, 0.3828, 0.646, 0.789, 0.383, 0.3765, 0.4658, 0.4522, 0.3766, 0.4658, 0.383, 0.3765, 0.789, 0.383, 0.3765, 0.789, 0.4522, 0.3766, 0.4658, 0.4522, 0.3766, 0.4658, 0.383, 0.3765, 0.4732, 0.452, 0.6461, 0.4732, 0.3828, 0.646, 0.4658, 0.383, 0.3765, 0.4658, 0.4522, 0.3766, 0.4732, 0.452, 0.6461, 0.7965, 0.3828, 0.646, 0.789, 0.4522, 0.3766, 0.789, 0.383, 0.3765, 0.7965, 0.3828, 0.646, 0.7965, 0.452, 0.6461, 0.789, 0.4522, 0.3766, 0.6348, 0.3828, 0.646, 0.7965, 0.452, 0.6461, 0.7965, 0.3828, 0.646, 0.6348, 0.3828, 0.646, 0.6348, 0.452, 0.6461, 0.7965, 0.452, 0.6461, 0.7675, 0.3821, 0.6224, 0.789, 0.383, 0.3765, 0.7613, 0.3823, 0.4001, 0.7675, 0.3821, 0.6224, 0.7965, 0.3828, 0.646, 0.789, 0.383, 0.3765, 0.6342, 0.4527, 0.6225, 0.4732, 0.452, 0.6461, 0.5009, 0.4527, 0.6225, 0.6342, 0.4527, 0.6225, 0.6348, 0.452, 0.6461, 0.4732, 0.452, 0.6461, 0.7613, 0.3823, 0.4001, 0.4658, 0.383, 0.3765, 0.4948, 0.3823, 0.4001, 0.7613, 0.3823, 0.4001, 0.789, 0.383, 0.3765, 0.4658, 0.383, 0.3765, 0.5009, 0.4527, 0.6225, 0.4658, 0.4522, 0.3766, 0.4948, 0.4529, 0.4002, 0.5009, 0.4527, 0.6225, 0.4732, 0.452, 0.6461, 0.4658, 0.4522, 0.3766, 0.7675, 0.4527, 0.6225, 0.6348, 0.452, 0.6461, 0.6342, 0.4527, 0.6225, 0.7675, 0.4527, 0.6225, 0.7965, 0.452, 0.6461, 0.6348, 0.452, 0.6461, 0.4732, 0.3828, 0.646, 0.6348, 0.452, 0.6461, 0.6348, 0.3828, 0.646, 0.4732, 0.3828, 0.646, 0.4732, 0.452, 0.6461, 0.6348, 0.452, 0.6461, 0.5009, 0.3821, 0.6224, 0.6348, 0.3828, 0.646, 0.6342, 0.3821, 0.6224, 0.5009, 0.3821, 0.6224, 0.4732, 0.3828, 0.646, 0.6348, 0.3828, 0.646, 0.5009, 0.2408, 0.6222, 0.6342, 0.3821, 0.6224, 0.6342, 0.2408, 0.6222, 0.5009, 0.2408, 0.6222, 0.5009, 0.3821, 0.6224, 0.6342, 0.3821, 0.6224, 0.4657, 0.5232, 0.6526, 0.635, 0.5624, 0.6527, 0.635, 0.5232, 0.6526, 0.4657, 0.5232, 0.6526, 0.4657, 0.5624, 0.6527, 0.635, 0.5624, 0.6527, 0.5009, 0.5233, 0.6226, 0.635, 0.5232, 0.6526, 0.6342, 0.5233, 0.6226, 0.5009, 0.5233, 0.6226, 0.4657, 0.5232, 0.6526, 0.635, 0.5232, 0.6526, 0.5068, 0.1194, 0.8446, 0.6401, 0.2407, 0.8446, 0.6401, 0.1194, 0.8446, 0.5068, 0.1194, 0.8446, 0.5068, 0.2407, 0.8446, 0.6401, 0.2407, 0.8446, 0.5068, 0.2407, 0.8446, 0.6342, 0.2408, 0.6222, 0.6401, 0.2407, 0.8446, 0.5068, 0.2407, 0.8446, 0.5009, 0.2408, 0.6222, 0.6342, 0.2408, 0.6222, 0.5009, 0.4527, 0.6225, 0.6342, 0.5233, 0.6226, 0.6342, 0.4527, 0.6225, 0.5009, 0.4527, 0.6225, 0.5009, 0.5233, 0.6226, 0.6342, 0.5233, 0.6226, 0.7675, 0.2408, 0.6222, 0.6401, 0.1194, 0.8446, 0.6401, 0.2407, 0.8446, 0.7675, 0.2408, 0.6222, 0.7675, 0.1195, 0.6222, 0.6401, 0.1194, 0.8446)
 
-[node name="Tsukuba" type="Node3D"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wlvdw"]
+sky_curve = 0.270375
+sky_cover = ExtResource("25_t2mq8")
+ground_bottom_color = Color(0.756863, 0.807843, 0.862745, 1)
+ground_horizon_color = Color(0.309804, 0.654902, 0.815686, 1)
+ground_curve = 1.1536
+ground_energy_multiplier = 4.05
+sun_angle_max = 150.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_k7gfs")
+[sub_resource type="Sky" id="Sky_7d5kt"]
+sky_material = SubResource("ProceduralSkyMaterial_wlvdw")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_jip3o"]
+background_mode = 2
+background_color = Color(0.571067, 0.681879, 0.913725, 1)
+background_energy_multiplier = 0.6
+background_canvas_max_layer = 1000
+sky = SubResource("Sky_7d5kt")
+sky_custom_fov = 91.2
+ambient_light_color = Color(0.65506, 0.519132, 0.240495, 1)
+ambient_light_energy = 16.0
+reflected_light_source = 2
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yr0sy"]
+albedo_color = Color(0.407843, 0.462745, 0.223529, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_48r4y"]
+material = SubResource("StandardMaterial3D_yr0sy")
+
+[node name="Tsukuba" type="Node3D"]
+script = ExtResource("1_8sg2w")
 
 [node name="mazda_mx_5" parent="." instance=ExtResource("1_fkdu3")]
 transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -16, 0, 0)
@@ -3153,3 +3164,42 @@ shape = SubResource("ConcavePolygonShape3D_uu036")
 
 [node name="Plane_001_66" type="Node3D" parent="Tsukuba Circuit"]
 transform = Transform3D(1.1104, 0, 0, 0, 1.1104, 0, 0, 0, 1.1104, 0.0319512, 0, 0.602813)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jip3o")
+
+[node name="Ground" type="MeshInstance3D" parent="WorldEnvironment"]
+transform = Transform3D(-2.18557e-05, -4000, 0, 500, -0.000174846, 0, 0, 0, 5000, 1.12667e-05, -257.752, 264.445)
+mesh = SubResource("CapsuleMesh_48r4y")
+skeleton = NodePath("../..")
+
+[node name="backbox" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.895
+anchor_top = 0.904
+anchor_right = 0.978
+anchor_bottom = 0.966
+offset_left = -0.0400391
+offset_top = 0.207947
+offset_right = 0.343994
+offset_bottom = 0.0319824
+
+[node name="BackButton" type="Button" parent="backbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="BackText" type="Label" parent="backbox/BackButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="backbox/BackButton" to="." method="_on_back_button_pressed"]

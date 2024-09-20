@@ -432,7 +432,7 @@ use_as_steering = true
 wheel_roll_influence = 1.0
 wheel_friction_slip = 9.0
 suspension_stiffness = 200.0
-suspension_max_force = 8000.0
+suspension_max_force = 9000.0
 
 [node name="RF_Tyres Mesh" type="MeshInstance3D" parent="RF_Wheel"]
 transform = Transform3D(-4.28372e-08, -0.98, -4.28372e-08, 0, -4.28372e-08, 0.98, -0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
@@ -456,7 +456,7 @@ use_as_steering = true
 wheel_roll_influence = 1.0
 wheel_friction_slip = 9.0
 suspension_stiffness = 200.0
-suspension_max_force = 8000.0
+suspension_max_force = 9000.0
 
 [node name="LF_Tyres Mesh" type="MeshInstance3D" parent="LF_Wheel"]
 transform = Transform3D(-4.28372e-08, 0.98, 4.28372e-08, 0, -4.28372e-08, 0.98, 0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
@@ -479,7 +479,7 @@ use_as_traction = true
 wheel_roll_influence = 1.0
 wheel_friction_slip = 30.0
 suspension_stiffness = 200.0
-suspension_max_force = 8000.0
+suspension_max_force = 9000.0
 
 [node name="RR_Tyres Mesh" type="MeshInstance3D" parent="RR_Wheel"]
 transform = Transform3D(0.00346805, -0.979993, -0.000862591, 0.00775218, -0.000835147, 0.979969, -0.979963, -0.00347477, 0.00774918, 0, 0, 0)
@@ -502,7 +502,7 @@ use_as_traction = true
 wheel_roll_influence = 1.0
 wheel_friction_slip = 30.0
 suspension_stiffness = 200.0
-suspension_max_force = 8000.0
+suspension_max_force = 9000.0
 
 [node name="LR_Tyres Mesh" type="MeshInstance3D" parent="LR_Wheel"]
 transform = Transform3D(-4.28372e-08, 0.98, 4.28372e-08, 0, -4.28372e-08, 0.98, 0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)

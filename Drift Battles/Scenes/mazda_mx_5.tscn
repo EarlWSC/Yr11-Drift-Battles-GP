@@ -2,12 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/drivephysics.gd" id="1_d2qjg"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wu7mm"]
-size = Vector3(6.565, 0.939758, 2.82092)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pklxk"]
-size = Vector3(0.628143, 0.52356, 2.37085)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3vp5"]
 resource_name = "Material.005"
 cull_mode = 2
@@ -317,18 +311,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qvm8l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yu7qx"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_8pp75"]
-lightmap_size_hint = Vector2i(17, 11)
-material = SubResource("StandardMaterial3D_yu7qx")
-height = 0.5
-radial_segments = 10
-rings = 0
-
-[sub_resource type="BoxMesh" id="BoxMesh_mgawp"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_imjh4"]
 resource_name = "Material.004"
 cull_mode = 2
@@ -367,10 +349,77 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_grsys")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wu7mm"]
+size = Vector3(6.565, 0.939758, 2.82092)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pklxk"]
+size = Vector3(0.628143, 0.52356, 2.37085)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yu7qx"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8pp75"]
+lightmap_size_hint = Vector2i(17, 11)
+material = SubResource("StandardMaterial3D_yu7qx")
+height = 0.5
+radial_segments = 10
+rings = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_mgawp"]
+
 [node name="mazda_mx_5" type="VehicleBody3D"]
 mass = 2000.0
 center_of_mass_mode = 1
 script = ExtResource("1_d2qjg")
+
+[node name="Meshes" type="Node3D" parent="."]
+
+[node name="Side Mirrors" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+mesh = SubResource("ArrayMesh_sre38")
+skeleton = NodePath("")
+
+[node name="?" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+mesh = SubResource("ArrayMesh_cp4xo")
+skeleton = NodePath("")
+
+[node name="Park Lights Front" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+mesh = SubResource("ArrayMesh_qdpiu")
+skeleton = NodePath("")
+
+[node name="Brake Lights Rear" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+mesh = SubResource("ArrayMesh_66h6k")
+skeleton = NodePath("")
+
+[node name="Chassis" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+mesh = SubResource("ArrayMesh_aqvn2")
+skeleton = NodePath("")
+
+[node name="Interior" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1hm1b")
+skeleton = NodePath("")
+
+[node name="Wheel Rims" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 0.00490436, 0.999988, 0, -0.999988, 0.00490436, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_yb0iq")
+skeleton = NodePath("")
+
+[node name="Tyres + Steering Wheel" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_iaglr")
+skeleton = NodePath("")
+
+[node name="Popup Headlights" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0.012965, 0.0126669, 0.000566959)
+mesh = SubResource("ArrayMesh_g3kik")
+skeleton = NodePath("")
 
 [node name="CollisionShape_Chassis" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1, 0)
@@ -381,49 +430,6 @@ shape = SubResource("BoxShape3D_wu7mm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.328, 1.762, 0)
 visible = false
 shape = SubResource("BoxShape3D_pklxk")
-metadata/_edit_group_ = true
-
-[node name="Side Mirrors" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_sre38")
-skeleton = NodePath("")
-
-[node name="?" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_cp4xo")
-skeleton = NodePath("")
-
-[node name="Park Lights Front" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_qdpiu")
-skeleton = NodePath("")
-
-[node name="Brake Lights Rear" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_66h6k")
-skeleton = NodePath("")
-
-[node name="Chassis" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_aqvn2")
-skeleton = NodePath("")
-
-[node name="Interior" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_1hm1b")
-skeleton = NodePath("")
-
-[node name="Wheel Rims" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.00490436, 0.999988, 0, -0.999988, 0.00490436, 0, 0, 0)
-visible = false
-mesh = SubResource("ArrayMesh_yb0iq")
-skeleton = NodePath("")
-
-[node name="Tyres + Steering Wheel" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-visible = false
-mesh = SubResource("ArrayMesh_iaglr")
-skeleton = NodePath("")
 
 [node name="RF_Wheel" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1.74846e-07, 1, 0, 1, 1.74846e-07, -1, 7.64274e-15, -4.37114e-08, 1.9, 0.74, 1.15)
@@ -519,7 +525,4 @@ transform = Transform3D(-4.37114e-09, -0.0707107, -0.565685, 0.1, -6.18172e-09, 
 mesh = SubResource("BoxMesh_mgawp")
 skeleton = NodePath("../../..")
 
-[node name="Popup Headlights" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.22045e-16, 1, 0, -1, 2.22045e-16, 0, 0, 0)
-mesh = SubResource("ArrayMesh_g3kik")
-skeleton = NodePath("")
+[node name="car_dashboard" type="Node2D" parent="."]

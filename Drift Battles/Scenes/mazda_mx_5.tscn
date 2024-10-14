@@ -1,6 +1,10 @@
-[gd_scene load_steps=33 format=4 uid="uid://57cbs4l3mrxb"]
+[gd_scene load_steps=34 format=4 uid="uid://57cbs4l3mrxb"]
 
 [ext_resource type="Script" path="res://Scripts/drivephysics.gd" id="1_d2qjg"]
+
+[sub_resource type="Curve" id="Curve_4t864"]
+_data = [Vector2(0, 0.164835), 0.0, 0.0, 0, 0, Vector2(0.264706, 0.164835), 0.0, 0.0, 0, 0, Vector2(0.911765, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3vp5"]
 resource_name = "Material.005"
@@ -371,6 +375,13 @@ rings = 0
 mass = 2000.0
 center_of_mass_mode = 1
 script = ExtResource("1_d2qjg")
+MAX_ENGINE_FORCE = null
+MAX_BRAKE_FORCE = null
+gear_ratio = null
+reverse_ratio = null
+final_drive = null
+max_engine_rpm = null
+power_curve = SubResource("Curve_4t864")
 
 [node name="Meshes" type="Node3D" parent="."]
 

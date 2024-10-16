@@ -1,7 +1,7 @@
 extends Control
 
 func _on_tsukuba_pressed():
-	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+	get_tree().change_scene_to_file("res://Scenes/World.tscn")
 
 func _on_interlagos_pressed(): #THIS IS ACTUALLY JEREZ CIRCUIT
 	get_tree().change_scene_to_file("res://Scenes/jerez.tscn")

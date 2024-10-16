@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/drivephysics.gd" id="1_d2qjg"]
 
-[sub_resource type="Curve" id="Curve_4t864"]
-_data = [Vector2(0, 0.164835), 0.0, 0.0, 0, 0, Vector2(0.264706, 0.164835), 0.0, 0.0, 0, 0, Vector2(0.911765, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+[sub_resource type="Curve" id="Curve_qj4y8"]
+_data = [Vector2(0, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.220588, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.823529, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3vp5"]
@@ -373,15 +373,11 @@ rings = 0
 
 [node name="mazda_mx_5" type="VehicleBody3D"]
 mass = 2000.0
+gravity_scale = 5.0
 center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.1, 0)
 script = ExtResource("1_d2qjg")
-MAX_ENGINE_FORCE = null
-MAX_BRAKE_FORCE = null
-gear_ratio = null
-reverse_ratio = null
-final_drive = null
-max_engine_rpm = null
-power_curve = SubResource("Curve_4t864")
+power_curve = SubResource("Curve_qj4y8")
 
 [node name="Meshes" type="Node3D" parent="."]
 
@@ -447,9 +443,9 @@ transform = Transform3D(-4.37114e-08, -1.74846e-07, 1, 0, 1, 1.74846e-07, -1, 7.
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 1.0
-wheel_friction_slip = 9.0
+wheel_friction_slip = 20.0
 suspension_stiffness = 200.0
-suspension_max_force = 9000.0
+suspension_max_force = 34000.0
 
 [node name="RF_Tyres Mesh" type="MeshInstance3D" parent="RF_Wheel"]
 transform = Transform3D(-4.28372e-08, -0.98, -4.28372e-08, 0, -4.28372e-08, 0.98, -0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
@@ -471,9 +467,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.9, 0
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 1.0
-wheel_friction_slip = 9.0
+wheel_friction_slip = 20.0
 suspension_stiffness = 200.0
-suspension_max_force = 9000.0
+suspension_max_force = 34000.0
 
 [node name="LF_Tyres Mesh" type="MeshInstance3D" parent="LF_Wheel"]
 transform = Transform3D(-4.28372e-08, 0.98, 4.28372e-08, 0, -4.28372e-08, 0.98, 0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
@@ -494,9 +490,9 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.74, 1.15)
 use_as_traction = true
 wheel_roll_influence = 1.0
-wheel_friction_slip = 30.0
+wheel_friction_slip = 40.0
 suspension_stiffness = 200.0
-suspension_max_force = 9000.0
+suspension_max_force = 34000.0
 
 [node name="RR_Tyres Mesh" type="MeshInstance3D" parent="RR_Wheel"]
 transform = Transform3D(0.00346805, -0.979993, -0.000862591, 0.00775218, -0.000835147, 0.979969, -0.979963, -0.00347477, 0.00774918, 0, 0, 0)
@@ -517,9 +513,9 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.9, 0.74, -1.15)
 use_as_traction = true
 wheel_roll_influence = 1.0
-wheel_friction_slip = 30.0
+wheel_friction_slip = 40.0
 suspension_stiffness = 200.0
-suspension_max_force = 9000.0
+suspension_max_force = 34000.0
 
 [node name="LR_Tyres Mesh" type="MeshInstance3D" parent="LR_Wheel"]
 transform = Transform3D(-4.28372e-08, 0.98, 4.28372e-08, 0, -4.28372e-08, 0.98, 0.98, 4.28372e-08, 1.87247e-15, 0, 0, 0)
@@ -535,3 +531,15 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-4.37114e-09, -0.0707107, -0.565685, 0.1, -6.18172e-09, 0, -4.37114e-09, -0.0707107, 0.565685, 0, 0.222795, 0)
 mesh = SubResource("BoxMesh_mgawp")
 skeleton = NodePath("../../..")
+
+[node name="Info" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.91
+anchor_top = 0.896
+anchor_right = 0.91
+anchor_bottom = 0.896
+offset_left = -102.32
+offset_top = -65.608
+offset_right = 101.68
+offset_bottom = 65.392
+theme_override_font_sizes/font_size = 40

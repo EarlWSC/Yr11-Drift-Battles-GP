@@ -1,29 +1,38 @@
 extends VehicleBody3D
-
 var acceleration = 0
 var brakes = 0
-@export var MAX_ENGINE_FORCE = 700.00
+@export var MAX_ENGINE_FORCE = 2950.00
 @export var MAX_BRAKE_FORCE = 50.00
 
-@export var gear_ratio:Array = [2.69, 2.01, 1.59, 1.32, 1.13, 1.0]
+@export var gear_ratio:Array = [2.29, 1.81, 1.39, 1.12, 0.93, 0.81]
 @export var reverse_ratio:float = -2.5
 @export var final_drive:float = 3.38
-@export var max_engine_rpm:float = 8000.00
+@export var max_engine_rpm:float = 10000.00
 @export var power_curve:Curve = null
 
 var current_gear = 1
 var current_speed_mps = 0.0
 @onready var last_pos = position
 
+func _process_gear_inputs():
+	if Input.is_action_just_pressed("gearup") and current_gear < gear_ratio.size():
+		current_gear = current_gear + 1
+	elif Input.is_action_just_pressed("geardown") and current_gear > -1:
+		current_gear = current_gear - 1
+
 func _process(delta):
+	
+	_process_gear_inputs()
+	
 	var speed = get_speed_kph()
 	var rpm = calculation_of_rpm()
-	
-	var info = 'Speed: %.0f, RPM %.0f (Gear: %d)' % [ speed, rpm, current_gear]
-	print(info)
+
+	var info = 'RPM: %.0f 
+				(gear: %d)'  % [ (rpm / 1.3) , current_gear ]
+	$Info.text = info
 
 func get_speed_kph():
-	return current_speed_mps * 3600.00 / 1000.00
+	return 
 
 func calculation_of_rpm() -> float:
 	if current_gear == 0:
@@ -33,13 +42,15 @@ func calculation_of_rpm() -> float:
 	var wheel_rotation_speed : float = 60.0 * current_speed_mps
 	var drive_shaft_rotation_speed : float = wheel_rotation_speed * final_drive
 	if current_gear == -1:
-		return drive_shaft_rotation_speed * -reverse_ratio
+		return drive_shaft_rotation_speed * reverse_ratio
 	elif current_gear <= gear_ratio.size():
 		return drive_shaft_rotation_speed * gear_ratio[current_gear - 1]
 	else:
 		return 0.0
 
 func _physics_process(delta):
+	current_speed_mps = (position - last_pos).length() / delta
+	
 	if Input.is_action_pressed("forward"):
 		acceleration = 1.0
 	else:
@@ -49,6 +60,7 @@ func _physics_process(delta):
 	else:
 		brakes = 0.0
 
+	brake = brakes * MAX_BRAKE_FORCE
 
 	var rpm = calculation_of_rpm()
 	var rpm_factor = clamp(rpm / max_engine_rpm, 0.0 , 1.0)
@@ -64,7 +76,11 @@ func _physics_process(delta):
 		$LR_Wheel.engine_force = 0.0
 		$RR_Wheel.engine_force = 0.0
 	
+	
+	### STEERING ###
 	steering = lerp(steering, Input.get_axis("right","left") * 0.5, 4 * delta)
+	last_pos = position
+	
 	###############################################################################################
 	#var wheelspin = abs($LR_Wheel.get_rpm())
 	#$LR_Wheel.engine_force = acceleration * torque * (1 - wheelspin / max_wheelspin) 

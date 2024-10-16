@@ -2401,12 +2401,6 @@ script = ExtResource("1_8sg2w")
 
 [node name="mazda_mx_5" parent="." instance=ExtResource("1_fkdu3")]
 transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -16, 0, 0)
-MAX_ENGINE_FORCE = null
-MAX_BRAKE_FORCE = null
-gear_ratio = null
-reverse_ratio = null
-final_drive = null
-max_engine_rpm = null
 
 [node name="camera_pivot_point" type="Node3D" parent="mazda_mx_5"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.57849e-15, 0.109562, -4.76837e-07)
@@ -3185,10 +3179,10 @@ anchor_left = 0.895
 anchor_top = 0.904
 anchor_right = 0.978
 anchor_bottom = 0.966
-offset_left = -0.0400391
-offset_top = 0.207947
-offset_right = 0.343994
-offset_bottom = 0.0319824
+offset_left = -1030.04
+offset_top = -5.79199
+offset_right = -1029.66
+offset_bottom = -5.96796
 
 [node name="BackButton" type="Button" parent="backbox"]
 layout_mode = 2
